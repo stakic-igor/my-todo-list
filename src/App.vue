@@ -1,4 +1,5 @@
 <script setup>
+  import Header from './components/Header.vue';
   import SingleTask from './components/SingleTask.vue';
 
 
@@ -13,7 +14,7 @@
 </script>
 
 <template>
- <h1>Welcome to My Todo List</h1>
+  <Header />
  <div v-for="task in tasks" :key="task.id">
   <SingleTask 
     :id="task.id"
