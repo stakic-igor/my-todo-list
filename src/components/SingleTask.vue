@@ -1,14 +1,22 @@
-<script setup></script>
+<script setup>
+
+const props = defineProps({
+    id: Number,
+    date: String,
+    isCompleted: Boolean,
+    title: String,
+    description: String
+});
+
+</script>
 
 <template>
     <div>
-        <p>15. 7. 2025</p>
+        <p>{{ props.date }}</p>
         <button>delete</button>
     </div>
-    <h3>single task -taskID</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Ipsam, quibusdam.
-    </p>
+    <h3>{{ props.title }} - {{ props.id }}</h3>
+    <p>{{ props.description }}</p>
+    <p>status: {{ props.isCompleted }}</p>
     <button>Done!</button>
 </template>
