@@ -1,4 +1,5 @@
 <script setup>
+import Button from './Button.vue';
 
 const props = defineProps({
     id: Number,
@@ -13,10 +14,10 @@ const props = defineProps({
 <template>
     <div>
         <p>{{ props.date }}</p>
-        <button>delete</button>
+        <Button button-text="Delete" />
     </div>
     <h3>{{ props.title }} - {{ props.id }}</h3>
     <p>{{ props.description }}</p>
     <p>status: {{ props.isCompleted }}</p>
-    <button>Done!</button>
+    <Button button-text="Mark as done" />
 </template>
